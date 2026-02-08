@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+/* fade in */
+.fade {
+  animation: fade 1.2s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: scale(1.02); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ---------- LANDING ---------- */
+
+body.landing {
+  margin: 0;
+  height: 100vh;
+  background: white;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+.grid {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, #eaeaea 1px, transparent 1px),
+    linear-gradient(to bottom, #eaeaea 1px, transparent 1px);
+  z-index: -1;
+}
+
+.cat {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  width: 70px;
+  opacity: 0.9;
+}
+
+.center {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-text {
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.tap-text {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.heart {
+  font-size: 60px;
+  color: black;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.heart:hover {
+  transform: scale(1.15);
+  color: #ff4d6d;
+}
+
+/* ---------- LETTER ---------- */
+
+body.letter {
+  margin: 0;
+  height: 100vh;
+  background: black;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.textCont {
+  max-width: 720px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.8;
+  padding: 35px;
+  color: #ffd6df;
+  z-index: 2;
+}
+
+.glow {
+  animation: glow 4s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px rgba(255,70,110,0.15); }
+  to { text-shadow: 0 0 25px rgba(255,70,110,0.45); }
+}
+
+/* particles */
+
+.particles span {
+  position: fixed;
+  width: 2px;
+  height: 2px;
+  background: rgba(255,255,255,0.35);
+  animation: float 8s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); opacity: 0; }
+  20% { opacity: 0.6; }
+  to { transform: translateY(-10vh); opacity: 0; }
+}
